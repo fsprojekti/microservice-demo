@@ -1,0 +1,44 @@
+HOW TOS
+
+1. JS IPFS v brskalniku
+Omejen na:
+	Websocket - komunikacijski protokol med uporabnikovim brskalnikom in strežnikom
+	WebRTC - omogoča spletnim aplikacijam streamanje in snemanje audio/video, in pa tudi poljubne podatke
+
+Ne podpira => TCP - komunikacijski protokol, komunikacija prek IP omrežja
+
+2. js-ipfscli 	-> potrebno inštalirati globalno
+		-> repozitorij: ~/.jsipfs (lahko ga spremenimo z IPFS_PATH)
+		-> default swarm port: 4002
+		-> default API port: 5002
+
+*kako se to razlikuje od go implementacije??*
+
+3. js-ipfs config datoteka
+Profiles: 	za preverit test, ker je hitreje -> ipfs init --profile ali ipfs config profile apply
+Adresses: 	API - Default: /ip4/127.0.0.1/tcp/5002
+		ostali so nepomembni mogoce gateway
+Identity:	PeerID - "Set on init and never read, its merely here for convenience. 
+			  IPFS will always generate the peerID from its keypair at runtime."
+		PrivKey - "The base64 encoded protobuf describing (and containing) the nodes private key."
+
+4. IPFS as daemon -> ipfsd-ctl modul. 
+* probajmo runat daemon pred našo kodo - pred create funkcijo!! *
+
+5. IPFS module -> create options, *za pogledat glob source*
+
+sklepi:	i. mogoče je treba zagnat daemon posebej in se potem z create povezat.
+	ii. glob source za celotne datoteke
+
+PEER ID
+.ipfs	:12D3KooWEKHYaG9NhKcYtW5FjTLjj6krcw1gBEaFCtNgkLxzL9nn	
+.jsipfs	:12D3KooWHFB5qwVpkgqVXohGYu1F1RDrE6oF6GJ26cL3fnyQezPS
+PRIV KEY
+.ipfs	:CAESQHcyCKMPI4XdKICPbx+282Yc9cMYQgKTkNIXiHm3n/7DQtdc/Aly3etUJQ0xveA6ymhcwbHWaGOWQVor3NbsOac=
+.jsipfs	:CAESQPcp36dqgQdBTMDwMJPHN2Cp7uzRq5dr093V2MRj3DWPblzLopfDTAfKFae44YegmrVozEYHbLSLsvf7q1lS3ZE=
+To je v config filu, nevem zakaj mi dva generira
+
+*morem poštekat preko katerega noda deluje ipfs-http-client(nej bi prek ipfs go)*
+
+
+ 
