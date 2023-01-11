@@ -1,4 +1,4 @@
-import schedule from 'node-schedule'
+import schedule from 'node-schedule';
 import { krmilnikdb as db } from '../database/ldb.js';
 
 const jsonData = [
