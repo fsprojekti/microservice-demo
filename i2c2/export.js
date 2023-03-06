@@ -5,18 +5,19 @@ import rpio from 'rpio';
 
 export function getTemp() {
 
-    let buf1 = Buffer.alloc(12, 0x00); // 2 x 4-byte(float)
+    let buf1 = Buffer.alloc(14, 0x00); // 2 x 4-byte(float)
 
     rpio.i2cBegin(0x20); //master address?
     rpio.i2cSetBaudRate(100000);
     rpio.i2cSetSlaveAddress(0x08);
-    rpio.i2cRead(buf1, 12); // preberi 4 byte (arduino float)
+    rpio.i2cRead(buf1, 14); // preberi 12 byte (3x4b arduino float)
 
 
     const T1 = buf1.readFloatLE();
     const T2 = buf1.readFloatLE(4);
     const T3 = buf1.readFloatLE(8);
-    return [T1, T2, T3]
+    const E1 = buf1.readInt16LE(12)
+    return [T1, T2, T3, E1]
     
 }
 

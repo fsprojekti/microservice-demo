@@ -1,8 +1,8 @@
 {
-  "name": "i2c",
+  "name": "i2c2",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "i2c merilnik in kontroler",
+  "main": "merilnik.js",
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,9 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "lowdb": "^5.0.5",
-    "moment": "^2.29.3",
-    "node-schedule": "^2.1.0",
+    "lowdb": "^5.1.0",
+    "node-schedule": "^2.1.1",
     "rpio": "^2.4.2"
   }
 }
