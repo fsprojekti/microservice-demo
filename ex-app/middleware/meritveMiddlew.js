@@ -1,4 +1,4 @@
-import { meritvedb as db } from '../database/ldb.js';
+import { meritvedb as db } from '/home/cena/microservice-demo/ex-app/database/ldb.js';
 
 export function filterByTime(req, res, next) {
   const startTime = req.query.startTime || "00:00:00";

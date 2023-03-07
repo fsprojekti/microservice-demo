@@ -1,8 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import meritveRouter from './routes/meritve.js';
-import krmilnikRouter from './routes/krmilnik.js';
-import setRouter from './routes/setT.js';
+import meritveRouter from '/home/cena/microservice-demo/ex-app/routes/meritve.js';
+import krmilnikRouter from '/home/cena/microservice-demo/ex-app/routes/krmilnik.js';
+import setRouter from '/home/cena/microservice-demo/ex-app/routes/setT.js';
 
 const app = express();
 

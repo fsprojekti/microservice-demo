@@ -1,11 +1,11 @@
 import schedule from 'node-schedule'
-import * as i2cFun from './export.js'
+import * as i2cFun from '/home/cena/microservice-demo/i2c2/export.js'
 import { LowSync } from 'lowdb'
 import { JSONFileSync } from 'lowdb/node'
 
 
 // baza podatkov meritev
-const meritvePath = "../ex-app/database/meritve.json";
+const meritvePath = "/home/cena/microservice-demo/ex-app/database/meritve.json";
 const db = new LowSync(new JSONFileSync(meritvePath));
 
 // reset ce je treba

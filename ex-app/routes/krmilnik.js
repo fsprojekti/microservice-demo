@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { uploadSchedule } from '../controllers/krmilnikController.js'
+import { uploadSchedule } from '/home/cena/microservice-demo/ex-app/controllers/krmilnikController.js'
 
 
 const router = Router();

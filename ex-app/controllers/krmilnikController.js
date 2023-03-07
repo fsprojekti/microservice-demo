@@ -1,4 +1,4 @@
-import { krmilnikdb as db } from '../database/ldb.js';
+import { krmilnikdb as db } from '/home/cena/microservice-demo/ex-app/database/ldb.js';
 
 export function uploadSchedule(req, res) {
     const data = req.body;

@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import * as meritveController from '../controllers/meritveController.js'
-import { filterByTime } from '../middleware/meritveMiddlew.js'
+import * as meritveController from '/home/cena/microservice-demo/ex-app/controllers/meritveController.js'
+import { filterByTime } from '/home/cena/microservice-demo/ex-app/middleware/meritveMiddlew.js'
 
 const router = Router();
 

@@ -1,8 +1,11 @@
-import { meritvedb as db } from '../database/ldb.js';
+import { meritvedb as db } from '/home/cena/microservice-demo/ex-app/database/ldb.js';
 
 export function vseMeritve(req, res) {
+    try{
     db.read();
-    return res.json(db.data);
+    return res.json(db.data);}
+    catch(e){
+        res.json(e)}
 }
 
 

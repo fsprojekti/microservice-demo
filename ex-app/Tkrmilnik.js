@@ -1,5 +1,6 @@
 import schedule from 'node-schedule';
-import { krmilnikdb as db } from './database/ldb.js';
+import { krmilnikdb as db } from '/home/cena/microservice-demo/ex-app/database/ldb.js';
+import * as i2cFun from '/home/cena/microservice-demo/i2c2/export.js'
 
 
 db.read();
@@ -18,6 +19,7 @@ function scheduleJobs(data) {
         schedule.scheduleJob(cronTimePattern, function () {
             const now = new Date();
             console.log(`Scheduled time: ${element.d}, Current time: ${now.toLocaleString()}, Temperature: ${temp}`);
+            i2cFun.slaveSender(temp)
         });
     });
 }
