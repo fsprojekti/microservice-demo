@@ -1,7 +1,7 @@
-import schedule from 'node-schedule'
-import * as i2cFun from '/home/cena/microservice-demo/i2c2/export.js'
-import { LowSync } from 'lowdb'
-import { JSONFileSync } from 'lowdb/node'
+import schedule from 'node-schedule';
+import * as i2cFun from '/home/cena/microservice-demo/i2c2/export.js';
+import { LowSync } from 'lowdb';
+import { JSONFileSync } from 'lowdb/node';
 
 
 // baza podatkov meritev
@@ -12,7 +12,7 @@ const db = new LowSync(new JSONFileSync(meritvePath));
 db.data ||= []
 db.write()
 
-schedule.scheduleJob('00,30 * * * * *', merjenje)
+schedule.scheduleJob('00 * * * * *', merjenje)
 
 function merjenje() {
 	const date = new Date();
@@ -30,7 +30,7 @@ function merjenje() {
 	    "f2": f12,
 	    "f3": f21,
 	    "f4": f22
-	})
-	db.write()
+	});
+	db.write();
 }
 
